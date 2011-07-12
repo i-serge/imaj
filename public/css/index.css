@@ -1,0 +1,277 @@
+body{
+    background-image: url('/img/fondo_pagina_agronova.jpg');
+}
+
+a img{
+    border: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#wrapper{
+    margin: 10px auto;
+    width: 1080px;
+    height: 577px;
+}
+
+#headder{
+    width: 1080px;
+    height: 75px;
+    background-color: bisque;
+    position: relative;
+}
+
+#superior_logo{
+    width: 245px;
+    background-color: blue;
+    height: 100%;
+}
+
+#borde_izq{
+    background-image: url('/img/borde_izquierdo_barra_menu.png');
+    width: 2px;
+    height: 100%;
+    float: left;
+}
+
+#borde_der{
+    background-image: url('/img/borde_derecho_barra_menu.png');
+    width: 2px;
+    height: 100%;
+    float: left;
+}
+
+#logo{
+    float: left;
+    width: 241px;
+    text-align: center;
+    background-color: #39B54A;
+    height: 100%;
+}
+
+#buttons{
+    background-color: #39B54A;
+    float: right;
+    width: 835px;
+    height: 70px;
+    margin-top: -75px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: white;
+    position: relative;
+}
+
+.btn{
+    float: left;
+    height: 34px;
+    width: 120px;
+    padding-top: 11px;
+    margin: 10px 5px;
+    text-align: center;
+    background-image: url('/img/regular_button.png');
+    font-size: 21px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    border: 0;
+}
+
+#buttons #contacto{
+    float: left;
+    height: 34px;
+    width: 120px;
+    padding-top: 11px;
+    margin: 10px 5px;
+    text-align: center;
+    font-size: 21px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    background-image: url('/img/rollover_contact_button.png');
+}
+
+#buttons #contacto:hover{
+    background-image: url('/img/regular_contact_button.png');
+    margin-top: 5px;
+}
+
+#content{
+    width: 1080px;
+    height: 500px;
+    margin: 5px auto;
+    background-color: #F89C3E;
+    position: absolute;
+}
+
+.lineas{
+    height: 400px;
+    margin: 30px 20px;
+    border-top-color: white;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    position: relative;
+}
+
+#centered{
+    width: 800px;
+    height: 90%;
+    margin: 20px auto;
+    background-color: #B0BA25;
+}
+
+#video{
+    padding-top: 240px;
+    padding-left: 15px;
+    color: white;
+    font-size: 23px;
+    font-family: Arial;
+    font-weight: bolder;
+}
+
+#centered span{
+    text-decoration: underline;
+
+}
+
+#footer{
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+/*MENU*/
+#nav {
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}   
+#nav li {
+    float:left; 
+    position:relative;
+    z-index:500; 
+
+}
+
+#nav li ul li a:hover {
+    color: #F89C3E;
+}
+
+
+#nav ul {
+    position:absolute; 
+    display:none;
+    margin:58px 0 0 5px; 
+    background-color: black;
+    opacity: 0.7;
+    width: 175px;
+    padding-left: 25px;
+}
+
+#nav ul li { 
+    float:left;
+    list-style-image: url('/img/iconito_menu.png');
+    width: 175px;
+}
+#nav ul a, #nav ul span {
+    list-style-image: url('/img/iconito_menu.png');
+    height:15px;
+    padding: 8px 5px;
+    font-size: 18px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+}
+
+#title_seccion{
+    float: right;
+    margin-right: 20px;
+    padding-top: 7px;
+    font-size: 21px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;  
+}
+
+#contacto1{
+    width: 55%;
+    height: 100%;
+    float: left;
+}
+
+#contacto2{
+    width: 43%;
+    height: 100%;
+    float: right;
+    background-color: #FAF49D;
+    margin: 2px;
+}
+
+#contacto1 input{
+    width: 90%;
+    padding: 0;
+    margin-left: 5%;
+    height: 25px;
+    font-size: 20px;
+}
+
+#contacto1 , #contacto2{
+    font-family: arial;
+    font-size: 22px;
+    color: #9B8910;
+    font-weight: bold;
+}
+
+#contacto1 input, #contacto2 textarea{
+    color: #414042;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #FAF49D;
+    border: 0;
+}
+
+#contacto1 p{
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#contacto2 textarea{
+    width: 99%;
+    border: 0;
+    height: 276px;
+    font-size: 18px;
+}
+
+#contacto2 textarea:focus{
+    border: 0;
+}
+input.btn{
+    padding-top: 5px;
+    float: right;
+    margin: 0 10px 10px 0;
+    height: 44px;
+}
+
+input.btn:hover{
+    background-image: url('/img/rollover_button.png');
+}
+#contacto2 span{
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.error{
+    color: red;
+}
+
+.submenu a{
+    cursor: pointer;
+}
