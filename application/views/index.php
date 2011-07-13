@@ -9,8 +9,11 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <p>Nombre: <?php echo $nombre; ?></p>
-		<p>Nombre de usuario: <?php echo $usuario?></p>
-		<p>Contraseña: <?php echo $contrasena?></p>
+        <?php foreach($user as $r) ?>
+		<p>Nombre: <?php echo $r['nombre']?>
+		Nombre de usuario: <?php echo $r['usuario']?>
+		Contraseña: <?php echo $r['contrasena']?></p>
+		<?php endforeach; ?>
+
     </body>
 </html>
