@@ -1,0 +1,129 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 13-07-2011 a las 01:08:03
+-- Versión del servidor: 5.1.36
+-- Versión de PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Base de datos: `imaj`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asociacion`
+--
+
+CREATE TABLE IF NOT EXISTS `asociacion` (
+  `ID` int(11) NOT NULL,
+  `Nombre` varchar(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `asociacion`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `encuesta`
+--
+
+CREATE TABLE IF NOT EXISTS `encuesta` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `Edad` int(11) NOT NULL,
+  `Genero` varchar(2) NOT NULL,
+  `EstadoCivil` varchar(15) NOT NULL,
+  `Escolaridad` varchar(20) NOT NULL,
+  `Ocupacion` varchar(20) NOT NULL,
+  `PartidoPolitico` varchar(30) DEFAULT NULL,
+  `PresidenteMunicipal` varchar(40) DEFAULT NULL,
+  `Distrito` int(11) DEFAULT NULL,
+  `Desempeno` varchar(15) NOT NULL,
+  `Motiva` varchar(30) NOT NULL,
+  `PoliticaNecesaria` tinyint(1) NOT NULL,
+  `Participarias` varchar(25) DEFAULT NULL,
+  `TrabajoMunicipio` tinyint(1) NOT NULL,
+  `LapsoTrabajo` varchar(15) DEFAULT NULL,
+  `ProgramaGobierno` varchar(30) NOT NULL,
+  `IDUsuario` int(11) NOT NULL,
+  `Encuestador` varchar(40) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `encuesta`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `probcomunidad`
+--
+
+CREATE TABLE IF NOT EXISTS `probcomunidad` (
+  `ID` int(20) unsigned NOT NULL,
+  `Alumbrado` int(11) NOT NULL,
+  `Pavimentacion` int(11) NOT NULL,
+  `Basura` int(11) NOT NULL,
+  `Bandalismo` int(11) NOT NULL,
+  `Seguridad` int(11) NOT NULL,
+  `Drenaje` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `probcomunidad`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `seguromedico`
+--
+
+CREATE TABLE IF NOT EXISTS `seguromedico` (
+  `ID` int(20) unsigned NOT NULL,
+  `Nombre` varchar(30) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `seguromedico`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `Nombre` varchar(40) NOT NULL,
+  `Usuario` varchar(20) NOT NULL,
+  `Contrasena` varchar(20) NOT NULL,
+  `Permiso` varchar(15) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID` (`ID`),
+  UNIQUE KEY `Usuario` (`Usuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcar la base de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`ID`, `Nombre`, `Usuario`, `Contrasena`, `Permiso`) VALUES
+(1, 'Sergio Morales', 'admin', 'imaj1234', 'administrador');
