@@ -1,8 +1,11 @@
 $( document ).ready( function() {
+    $( '#uno' ).click( function(){
+        $.post( '/usuarios/login', function( data ){
+            $( '#contenido' ).html( data );
+        } )
+    })
     
-    $( '.btn').click(
-        
-        
-        );
-    $( '#contenido').html( '<strong>Stevem<strong>');
+    $( '#dos' ).click( function(){
+        $( '#contenido' ).html( 'Click en dos' );
+    })
 })
