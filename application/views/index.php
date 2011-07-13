@@ -9,8 +9,8 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php
-        echo "Principal"
-        ?>
+        <p>Nombre: <?php echo $nombre; ?></p>
+		<p>Nombre de usuario: <?php echo $usuario?></p>
+		<p>Contraseña: <?php echo $contrasena?></p>
     </body>
 </html>
