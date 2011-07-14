@@ -1,7 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,5 +13,10 @@ and open the template in the editor.
     		Nombre de usuario: <?php echo $r['usuario'] ?>
     		Contraseña: <?php echo $r['contrasena'] ?></p>
         <?php } ?>
+
+        <div id="uno">UNo</div> <div id="dos">DOs</div>
+        <div id="contenido">
+        </div>
+		<a href="index.php/prueba/index/">prueba</a>
     </body>
 </html>
