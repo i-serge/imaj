@@ -6,18 +6,16 @@
  */
 
 /**
- * Description of principal
+ * Description of user
  *
  * @author steven
  */
-class Principal extends CI_Controller{
+class Usuarios extends CI_Controller {
 
-	public $data = array();
+    public $data = array();
 
-    public function index(){
-        $this->load->view( 'index', $this->data);
-		
-		$this->load->database();
+    public function login() {
+        $this->load->database();
         $result = $this->db->query('SELECT * FROM usuarios');
         foreach ($result->result() as $row) {
             $this->data['nombre'] = $row->Nombre;
@@ -27,6 +25,7 @@ class Principal extends CI_Controller{
         
         $this->load->view( 'test' , $this->data );
     }
+
 }
 
 ?>
