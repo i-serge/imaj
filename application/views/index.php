@@ -13,6 +13,7 @@ and open the template in the editor.
     <body>
         <div id="uno">UNo</div> <div id="dos">DOs</div>
         <div id="contenido">
+        <a href="prueba/index/">prueba</a>
         </div>
     </body>
 </html>
