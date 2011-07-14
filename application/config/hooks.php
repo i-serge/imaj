@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['pre_controller']= array(
+        'class' => 'sesion',
+        'function' => 'check_login',
+        'filename' => 'sesion.php',
+        'filepath' => 'hooks',
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */

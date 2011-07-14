@@ -13,7 +13,8 @@ and open the template in the editor.
     <body>
         <div id="login">
             <?php
-            echo form_open('/usuario/login');
+            if( isset( $error ) ) echo $error;
+            echo form_open('/login/validate');
             echo 'Usuario:' . form_input('usuario', 'usuario') . '<br/>';
             echo 'Constrasena:' . form_password('password', '');
             echo form_submit( 'submit', 'Entrar' );

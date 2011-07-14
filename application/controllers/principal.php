@@ -15,6 +15,7 @@ class Principal extends CI_Controller{
 	public $data = array();
 
     public function index(){
+        /*
         $this->load->view( 'index', $this->data);
 		
 		$this->load->database();
@@ -24,7 +25,7 @@ class Principal extends CI_Controller{
             $this->data['usuario'] = $row->Usuario;
             $this->data['contrasena'] = $row->Contrasena;
         }
-        
+        */
         $this->load->view( 'test' , $this->data );
     }
 }

@@ -12,7 +12,7 @@
             <p>Nombre: <?php echo $r['nombre'] ?>
     		Nombre de usuario: <?php echo $r['usuario'] ?>
     		Contraseña: <?php echo $r['contrasena'] ?></p>
-        <?php } ?>
+        <?php } ?>  
 
         <div id="uno">UNo</div> <div id="dos">DOs</div>
         <div id="contenido">
