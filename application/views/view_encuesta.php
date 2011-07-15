@@ -19,9 +19,9 @@
 				margin:10px;
 			}
 		</style>
-		<link type="text/css" href="css/smoothness/jquery-ui-1.8.13.custom.css" rel="Stylesheet" />
+		<!--<link type="text/css" href="css/smoothness/jquery-ui-1.8.13.custom.css" rel="Stylesheet" />
 		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-		<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>-->
 	</head>
 	<body>
 		<div id="container" class="ui-widget-content ui-corner-all">

@@ -18,7 +18,7 @@ class Form extends Base {
 	protected $attributes;
 	protected $error;
 	/*jQueryUI themes can be previewed at http://jqueryui.com/themeroller/.*/
-	protected $jQueryUITheme = "smoothness";
+	protected $jQueryUITheme = "blitzer";
 	protected $resourcesPath;
 	/*Prevents various automated from being automatically applied.  Current options for this array
 	included jQuery, jQueryUI, jQueryUIButtons, focus, and style.*/
@@ -292,7 +292,7 @@ class Form extends Base {
 	private function renderCSSFiles() {
 		$urls = array();
 		if(!in_array("jQueryUI", $this->prevent))
-			$urls[] = "/css/" . $this->jQueryUITheme . "/jquery-ui-1.8.13.custom.css";
+			$urls[] = $this->prefix . "://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/" . $this->jQueryUITheme . "/jquery-ui.css";
 		foreach($this->elements as $element) {
 			$elementUrls = $element->getCSSFiles();
 			if(is_array($elementUrls))
@@ -367,9 +367,9 @@ JS;
 	private function renderJSFiles() {
 		$urls = array();
 		if(!in_array("jQuery", $this->prevent))
-			$urls[] = "/js/jquery-1.5.1.min.js";
+			$urls[] = $this->prefix . "://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
 		if(!in_array("jQueryUI", $this->prevent))
-			$urls[] = "/js/jquery-ui-1.8.13.custom.min.js";
+			$urls[] = $this->prefix . "://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js";
 		foreach($this->elements as $element) {
 			$elementUrls = $element->getJSFiles();
 			if(is_array($elementUrls))
