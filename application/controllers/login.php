@@ -22,7 +22,6 @@ class login extends CI_Controller {
         $this->load->database();
         $query = $this->db->query('SELECT * FROM usuarios WHERE usuario="'.$_POST['usuario'].'" AND contrasena="'.$_POST['password'].'"' );
         if( $query->num_rows()== 1 ){
-            $
             redirect( 'principal');
         }else{
             $this->data['error']="Usuario y/o password no son validos";
