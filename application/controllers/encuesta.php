@@ -20,13 +20,15 @@ class encuesta extends CI_Controller{
 		session_start();
 		$this->load->library('PFBC/Form');
 
-		$formEncuesta = new Form('formEncuesta', 800);
+		$formEncuesta = new Form('formEncuesta', 752);
 		$formEncuesta->configure(array(
+				'action' => 'encuesta/process',
 				'style' => 'font-size:.8em;',
 				'view' => new View_Grid(array(1,2,3,1,1,1,1,2,2,2,2,2))
 		));
 		$formEncuesta->addElement(new Element_Hidden('formH', 'formEncuesta'));
 		$formEncuesta->addElement(new Element_Textbox('Nombre del encuestador', 'txtEncuestador'));
+		$formEncuesta->addElement(new Element_HTMLExternal('<fieldset><legend><h2>Datos personales</h2></legend>'));
 		$formEncuesta->addElement(new Element_Textbox('Edad', 'txtEdad'));
 		$formEncuesta->addElement(new Element_Select('Genero','selGenero', array(
 						'Masculino','Femenino'
@@ -51,7 +53,8 @@ class encuesta extends CI_Controller{
 						'Ambos',
 						'Ninguna'
 						)));
-		$formEncuesta->addElement(new Element_HTMLExternal('<div style="margin:auto;"><h2>Imagen Política</h2></div><hr />'));
+		$formEncuesta->addElement(new Element_HTMLExternal('</fieldset>'));
+		$formEncuesta->addElement(new Element_HTMLExternal('<fieldset><legend><h2>Imagen Política</h2></legend>'));
 		$formEncuesta->addElement(new Element_Textbox('¿Sabe usted que partido político gobierna actualmente su municipio?','txtPartidoPolitico', array(
 						'description' => 'Si no sabe, deje el campo en blanco. De lo contrario escriba el nombre.'
 						)));
@@ -107,7 +110,8 @@ class encuesta extends CI_Controller{
 						'Junta de colonos',
 						'No participaría'
 						)));
-		$formEncuesta->addElement(new Element_HTMLExternal('<div style="margin:auto;"><h2>Información laboral</h2></div><hr />'));
+		$formEncuesta->addElement(new Element_HTMLExternal('</fieldset>'));
+		$formEncuesta->addElement(new Element_HTMLExternal('<fieldset><legend><h2>Información laboral</h2></legend>'));
 		$formEncuesta->addElement(new Element_Select('¿Trabaja dentro del municipio en donde habita?','selTrabaja', array(
 						'Si',
 						'No'
@@ -122,8 +126,24 @@ class encuesta extends CI_Controller{
 						'No'
 						)));
 		$formEncuesta->addElement(new Element_Textbox('¿De cuál?','txtBeneficiario'));
+		$formEncuesta->addElement(new Element_HTMLExternal('</fieldset>'));
 		$formEncuesta->addElement(new Element_Button('Enviar'));
 		$this->data['form'] = $formEncuesta;
         $this->load->view('view_encuesta', $this->data);
     }
+
+	public function process()
+	{
+		/*
+		$this->load->library('validation');
+
+		$fields['txtEncuestador'] = 'txtEncuestador';
+		$fields['txtEdad'] = 'txtEdad';
+		$this->validation->set_fields($fields);
+
+		$rules['txtEncuestador'] = 'required';
+		$rules['txtEdad'] = 'required';
+		$this->validation->set_rules($rules);*/
+		print($this->input->post('txtEncuestador'));
+	}
 }

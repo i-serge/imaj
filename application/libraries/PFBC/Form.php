@@ -292,7 +292,7 @@ class Form extends Base {
 	private function renderCSSFiles() {
 		$urls = array();
 		if(!in_array("jQueryUI", $this->prevent))
-			$urls[] = $this->prefix . "://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/" . $this->jQueryUITheme . "/jquery-ui.css";
+			$urls[] = "/css/" . $this->jQueryUITheme . "/jquery-ui-1.8.13.custom.css";
 		foreach($this->elements as $element) {
 			$elementUrls = $element->getCSSFiles();
 			if(is_array($elementUrls))
@@ -367,9 +367,9 @@ JS;
 	private function renderJSFiles() {
 		$urls = array();
 		if(!in_array("jQuery", $this->prevent))
-			$urls[] = $this->prefix . "://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
+			$urls[] = "/js/jquery-1.5.1.min.js";
 		if(!in_array("jQueryUI", $this->prevent))
-			$urls[] = $this->prefix . "://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js";
+			$urls[] = "/js/jquery-ui-1.8.13.custom.min.js";
 		foreach($this->elements as $element) {
 			$elementUrls = $element->getJSFiles();
 			if(is_array($elementUrls))
