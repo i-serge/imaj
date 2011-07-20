@@ -17,7 +17,7 @@ if (!defined('BASEPATH'))
   | path to your installation.
   |
  */
-$config['base_url'] = 'http://imaj.locail.ci/';
+$config['base_url'] = 'http://localhost/imaj/public/';
 
 /*
   |--------------------------------------------------------------------------
@@ -227,7 +227,7 @@ $config['cache_path'] = '';
   | MUST set an encryption key.  See the user guide for info.
   |
  */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'oF7wn7Dbaq8kLiUJHtb7qzww2N';
 
 /*
   |--------------------------------------------------------------------------

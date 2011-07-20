@@ -24,7 +24,7 @@ class encuesta extends CI_Controller{
 		$formEncuesta->configure(array(
 				'action' => 'encuesta/process',
 				'style' => 'font-size:.8em;',
-				'view' => new View_Grid(array(1,2,3,1,1,1,1,2,2,2,2,2))
+				'view' => new View_Grid(array(1,2,3,1,1,1,3,3,2,2,2,2,2))
 		));
 		$formEncuesta->addElement(new Element_Hidden('formH', 'formEncuesta'));
 		$formEncuesta->addElement(new Element_Textbox('Nombre del encuestador', 'txtEncuestador'));
@@ -64,6 +64,7 @@ class encuesta extends CI_Controller{
 		$formEncuesta->addElement(new Element_Textbox('¿Sabe usted a que distrito electoral pertenece?','txtDistrito', array(
 						'description' => 'Si no sabe, deje el campo en blanco. De lo contrario escriba el nombre del partido político'
 						)));
+		/*///////////
 		$formEncuesta->addElement(new Element_Sort('Ordene en grado de importancia los siguientes problemas de acuerdo a su comunidad','sortProblemas', array(
 						'Alumbrado público',
 						'Pavimentación',
@@ -73,6 +74,27 @@ class encuesta extends CI_Controller{
 						'Drenaje/Alcantarillado'), array(
 						'description' => 'La opción que coloque en la parte superior será la de mayor importancia y la que coloque en lo parte inferior la de menor importancia.'
 						)));
+		*///////////
+		$formEncuesta->addElement(new Element_HTMLExternal('<h3>Considera los siguientes problemas en tu comunidad y ordenalos del 1 al 6 por importancia, siendo el 1 el más importante</h3>'));
+		$formEncuesta->addElement(new Element_Select('Alumbrado público', 'selAlumbrado', array(
+						1,2,3,4,5,6
+						)));
+		$formEncuesta->addElement(new Element_Select('Pavimentación', 'selPavimentacion', array(
+						1,2,3,4,5,6
+						)));
+		$formEncuesta->addElement(new Element_Select('Recolección de basura', 'selBasura', array(
+						1,2,3,4,5,6
+						)));
+		$formEncuesta->addElement(new Element_Select('Seguridad pública', 'selSeguridad', array(
+						1,2,3,4,5,6
+						)));
+		$formEncuesta->addElement(new Element_Select('Bandalismo', 'selBandalismo', array(
+						1,2,3,4,5,6
+						)));
+		$formEncuesta->addElement(new Element_Select('Drenaje/Alcantarillado', 'selDrenaje', array(
+						1,2,3,4,5,6
+						)));
+		////////////
 		$formEncuesta->addElement(new Element_Select('¿Cuenta con algún seguro médico?','selSeguro', array(
 						'IMSS',
 						'ISSSTE',
