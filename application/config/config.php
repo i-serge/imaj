@@ -23,8 +23,8 @@ if (strpos($_SERVER['SERVER_NAME'], 'imaj.ci.tnmx.net') !== FALSE) {
 } else if (strpos($_SERVER['SERVER_NAME'], 'imaj.local.ci') !== FALSE) {
     $config['base_url'] = "http://imaj.local.ci";
     $config['index_page'] = '';
-} else if (strpos($_SERVER['SERVER_NAME'], 'local') !== FALSE) {
-    $config['base_url'] = "localhost/imaj/public";
+} else if (strpos($_SERVER['SERVER_NAME'], 'localhost') !== FALSE) {
+    $config['base_url'] = "http://localhost/imaj/public/";
     $config['index_page'] = 'index.php';
 }
 
