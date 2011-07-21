@@ -17,7 +17,16 @@ if (!defined('BASEPATH'))
   | path to your installation.
   |
  */
-$config['base_url'] = 'http://localhost/imaj/public/';
+if (strpos($_SERVER['SERVER_NAME'], 'imaj.ci.tnmx.net') !== FALSE) {
+    $config['base_url'] = "http://imaj.ci.tnmx.net";
+    $config['index_page'] = '';
+} else if (strpos($_SERVER['SERVER_NAME'], 'imaj.local.ci') !== FALSE) {
+    $config['base_url'] = "http://imaj.local.ci";
+    $config['index_page'] = '';
+} else if (strpos($_SERVER['SERVER_NAME'], 'local') !== FALSE) {
+    $config['base_url'] = "localhost/imaj/public";
+    $config['index_page'] = 'index.php';
+}
 
 /*
   |--------------------------------------------------------------------------
