@@ -29,7 +29,7 @@ class login extends CI_Controller {
                 'permiso' => $row->Permiso,
             );
             $this->session->set_userdata( $datos );
-            redirect('principal');
+            redirect('encuesta');
         } else {
             $this->data['error'] = "Usuario y/o password no son validos";
             $this->load->view('login', $this->data);

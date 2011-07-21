@@ -26,9 +26,7 @@
 	<body>
 		<div id="container" class="ui-widget-content ui-corner-all">
 			<div class="ui-widget-header ui-corner-all" style="text-align:center;"><h2>Encuesta Jóvenes X más</h2></div>
-			<?php
-			$form->render();
-			?>
+			<?php $form->render(); ?>
 		</div>
 	</body>
 </html>
