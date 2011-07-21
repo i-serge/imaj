@@ -14,8 +14,16 @@ class login extends CI_Controller {
 
     public $data = array();
 
+    public function __construct() {
+        parent::__construct();
+        if ( $this->session->userdata('logged_in') && $this->uri->segment(2)!='logout')
+            redirect('encuesta');
+        else
+            $this->load->view('login');
+    }
+
     public function index() {
-        $this->load->view('login');
+        
     }
 
     public function validate() {
@@ -28,12 +36,17 @@ class login extends CI_Controller {
                 'logged_in' => TRUE,
                 'permiso' => $row->Permiso,
             );
-            $this->session->set_userdata( $datos );
+            $this->session->set_userdata($datos);
             redirect('encuesta');
         } else {
             $this->data['error'] = "Usuario y/o password no son validos";
             $this->load->view('login', $this->data);
         }
+    }
+
+    public function logout() {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 
 }
